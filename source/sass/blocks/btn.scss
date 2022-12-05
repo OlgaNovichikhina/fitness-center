@@ -1,6 +1,7 @@
 .btn {
-  display: block;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   width: 100%;
   font-weight: 600;
@@ -15,19 +16,17 @@
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
-  }
-
-  &--card {
-    padding: 10px 5px;
   }
 }
 
 .btn:focus-visible,
 .btn:focus,
 .btn:hover {
-  opacity: 0.8;
+  //border: 4px solid;
+  //border-image-source: $blue-to-red-border;
+  color: $color-default-black;
+  background-color: $color-default-white;
 }
 
 .btn:active {

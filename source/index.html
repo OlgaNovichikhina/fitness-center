@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Фитнес-центр Supergym">
     <title>Supergym</title>
-    <link rel="preload" href="fonts/AlumniSans-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
-    <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/Roboto-Condensed.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Light.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/AlumniSans-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/AlumniSans-ExtraBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/AlumniSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
@@ -35,11 +35,12 @@
                 </ul>
                 <h1>Фитнес центр</h1>
               </div>
-              <a class="header__button btn" href="#subscription" data-anchor>Купить абонемент</a>
+              <a class="btn header__button" href="#subscription" data-anchor>Купить абонемент</a>
             </div>
             <picture>
-              <source type="image/webp" srcset="img/content/intro-photo.webp, img/content/intro-photo@2x.webp 2x">
-              <img src="img/content/intro-photo.png" srcset="img/content/intro-photo@2x.png 2x" width="500" height="556" loading="lazy" alt="Мужчина в футболке с символом Супермена.">
+              <source media="(max-width: 1199px)" srcset="./img/content/intro-photo-tablet.webp, ./img/content/intro-photo-tablet@2x.webp 2x" type="image/webp">
+              <source media="(min-width: 1200px)" type="image/webp" srcset="./img/content/intro-photo.webp, img/content/intro-photo@2x.webp 2x">
+              <img src="img/content/intro-photo.png" srcset="./img/content/intro-photo@2x.png 2x" width="500" height="556" loading="lazy" alt="Мужчина в футболке с символом Супермена.">
             </picture>
           </div>
         </div>
@@ -57,16 +58,173 @@
             </div>
             <div class="gym__media">
               <picture>
-                <source type="image/webp" srcset="img/content/photo-gym.webp, img/content/photo-gym@2x.webp 2x">
-                <img src="img/content/photo-gym.jpg" srcset="img/content/photo-gym@2x.jpg 2x" width="660" height="401" alt="Фото тренажерного зала.">
+                <source type="image/webp" srcset="./img/content/photo-gym.webp, img/content/photo-gym@2x.webp 2x">
+                <img src="./img/content/photo-gym.jpg" srcset="img/content/photo-gym@2x.jpg 2x" width="660" height="401" alt="Фото тренажерного зала.">
               </picture>
               <div class="gym__video" data-video>
                 <picture>
-                  <source type="image/webp" srcset="img/content/video.webp, img/content/video@2x.webp 2x">
-                  <img src="img/content/video.png" srcset="img/content/video@2x.png 2x" width="364" height="228" alt="Постер видео." data-video-poster>
+                  <source type="image/webp" srcset="./img/content/video.webp, img/content/video@2x.webp 2x">
+                  <img src="./img/content/video.png" srcset="img/content/video@2x.png 2x" width="364" height="228" alt="Постер видео." data-video-poster>
                 </picture>
                 <button class="gym__button is-nojs" data-video-button type="button" aria-label="Включить видео">
                 </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subscription" id="subscription">
+          <div class="container">
+            <h2>Абонементы</h2>
+            <div class="subscription__nav" data-sub-nav>
+              <button class="subscription__nav-button is-active is-nojs" type="button" data-but="tab-1" data-sub-button>
+                1 месяц
+              </button>
+              <button class="subscription__nav-button is-nojs" type="button" data-but="tab-2" data-sub-button>
+                6 месяцев
+              </button>
+              <button class="subscription__nav-button is-nojs" type="button" data-but="tab-3" data-sub-button>
+                12 месяцев
+              </button>
+            </div>
+            <div class="subscription__content">
+              <div class="subscription__subcontent is-active is-nojs" data-tab="tab-1" data-sub-tab>
+                <ul class="subscription__list">
+                  <li class="subscription__item" tabindex="0">
+                    <h3>С&nbsp;тренером</h3>
+                    <span>12&nbsp;занятий</span>
+                    <div class="subscription__price">
+                      <b>5000</b>
+                      <p>5000
+                        <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite.svg#rouble"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <a class="subscription__link btn" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item" tabindex="0">
+                    <h3>Дневной</h3>
+                    <span>с&nbsp;8:00 до&nbsp;17:00</span>
+                    <div class="subscription__price">
+                      <b>1700</b>
+                      <p>1700
+                        <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite.svg#rouble"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <a class="subscription__link btn" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item" tabindex="0">
+                    <h3>Полный день</h3>
+                    <span>с&nbsp;8:00 до&nbsp;22:00</span>
+                    <div class="subscription__price">
+                      <b>2700</b>
+                      <p>2700
+                        <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite.svg#rouble"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <a class="subscription__link btn" href="#">купить абонемент</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="subscription__subcontent is-nojs" data-tab="tab-2" data-sub-tab>
+                <ul class="subscription__list">
+                  <li class="subscription__item" tabindex="0">
+                    <h3>С&nbsp;тренером</h3>
+                    <span>12&nbsp;занятий</span>
+                    <div class="subscription__price">
+                      <b>30000</b>
+                      <p>30000
+                        <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite.svg#rouble"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <a class="subscription__link btn" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item" tabindex="0">
+                    <h3>Дневной</h3>
+                    <span>с&nbsp;8:00 до&nbsp;17:00</span>
+                    <div class="subscription__price">
+                      <b>10200</b>
+                      <p>10200
+                        <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite.svg#rouble"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <a class="subscription__link btn" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item" tabindex="0">
+                    <h3>Полный день</h3>
+                    <span>с&nbsp;8:00 до&nbsp;22:00</span>
+                    <div class="subscription__price">
+                      <b>16200</b>
+                      <p>16200
+                        <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite.svg#rouble"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <a class="subscription__link btn" href="#">купить абонемент</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="subscription__subcontent is-nojs" data-tab="tab-3" data-sub-tab>
+                <ul class="subscription__list">
+                  <li class="subscription__item" tabindex="0">
+                    <h3>С&nbsp;тренером</h3>
+                    <span>12&nbsp;занятий</span>
+                    <div class="subscription__price">
+                      <b>60000</b>
+                      <p>60000
+                        <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite.svg#rouble"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <a class="subscription__link btn" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item" tabindex="0">
+                    <h3>Дневной</h3>
+                    <span>с&nbsp;8:00 до&nbsp;17:00</span>
+                    <div class="subscription__price">
+                      <b>20400</b>
+                      <p>20400
+                        <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite.svg#rouble"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <a class="subscription__link btn" href="#">купить абонемент</a>
+                  </li>
+                  <li class="subscription__item" tabindex="0">
+                    <h3>Полный день</h3>
+                    <span>с&nbsp;8:00 до&nbsp;22:00</span>
+                    <div class="subscription__price">
+                      <b>32400</b>
+                      <p>32400
+                        <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite.svg#rouble"></use>
+                        </svg>
+                      </p>
+                    </div>
+                    <a class="subscription__link btn" href="#">купить абонемент</a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

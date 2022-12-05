@@ -1,0 +1,160 @@
+.header {
+  min-height: 658px;
+  background: $blue-to-red-round-desktop;
+  /*
+  @include vp-1199 {
+
+  }
+  */
+
+  /*
+  @include vp-767 {
+
+  }
+  */
+}
+
+.header__top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  margin-top: 10px;
+
+  @include vp-1199 {
+    width: 82px;
+  }
+}
+
+.header__phone {
+  font-family: $ff-main;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 31px;
+  letter-spacing: 0.03em;
+  color: $color-default-white;
+  margin-top: 0;
+
+  @include vp-1199 {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    margin-top: 5px;
+  }
+
+  &:hover,
+  &:focus-visible {
+    transition: all 0.3s ease-in-out;
+    color: $color-default-black;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+}
+
+.header__intro {
+  display: grid;
+  grid-template-columns: 45% 1fr;
+  gap: 30px;
+  padding-right: 17.2%;
+  margin-top: -12px;
+
+  @include vp-1199 {
+    grid-template-columns: 48% 1fr;
+    padding-right: 0;
+    padding-top: 30px;
+  }
+}
+
+.header__content span {
+  font-family: $ff-main;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: 0.03em;
+  color: $color-default-white;
+  display: flex;
+  margin-top: 112px;
+  margin-left: 263px;
+
+  @include vp-1199 {
+    font-size: 34px;
+    line-height: 41px;
+    margin-top: 50px;
+  }
+}
+
+.header__info {
+  display: flex;
+}
+
+.header h1 {
+  text-transform: uppercase;
+  font-family: $ff-main;
+  font-weight: 600;
+  font-size: 92px;
+  line-height: 110px;
+  text-align: right;
+  letter-spacing: 0.05em;
+  color: $color-default-white;
+  width: 250px;
+  margin: 13px 0 50px;
+  position: relative;
+  left: 7%;
+
+  @include vp-1199 {
+    text-transform: none;
+    width: 191px;
+    font-size: 72px;
+    line-height: 86px;
+    margin-top: 7px;
+    margin-bottom: 37px;
+  }
+}
+
+.header__list {
+  margin: 135px 0 0 0;
+  list-style: none;
+  padding: 0;
+  position: relative;
+  left: 4%;
+  width: 115px;
+
+  @include vp-1199 {
+    margin: 95px 20px 0 0;
+  }
+}
+
+.header__item {
+  font-family: $ff-secondary;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: right;
+  color: $color-default-white;
+}
+
+.header__button {
+  font-family: $ff-secondary;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-default-white;
+  background-color: transparent;
+  border: 4px solid $color-default-white;
+  min-height: 60px;
+  width: 54.5%;
+  margin-left: 163px;
+
+  @include vp-1199 {
+    width: 53%;
+    margin-left: 139px;
+  }
+}
