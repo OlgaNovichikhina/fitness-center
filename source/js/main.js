@@ -1,5 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {scrollPage} from './modules/scroll';
+import {addIframe} from './modules/video';
 
 // ---------------------------------
 
@@ -9,6 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
   iosVhFix();
   scrollPage();
+  addIframe();
 
   // Modules
   // ---------------------------------

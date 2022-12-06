@@ -23,12 +23,10 @@
 .btn:focus-visible,
 .btn:focus,
 .btn:hover {
-  //border: 4px solid;
-  //border-image-source: $blue-to-red-border;
   color: $color-default-black;
   background-color: $color-default-white;
 }
 
 .btn:active {
-  opacity: 0.4;
+  opacity: 0.5;
 }
