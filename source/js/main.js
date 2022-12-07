@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {scrollPage} from './modules/scroll';
 import {addIframe} from './modules/video';
+import {onClickTab} from './modules/tabs';
 
 // ---------------------------------
 
@@ -11,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
   iosVhFix();
   scrollPage();
   addIframe();
+  onClickTab();
 
   // Modules
   // ---------------------------------

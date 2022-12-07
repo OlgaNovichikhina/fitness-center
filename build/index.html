@@ -86,26 +86,27 @@
         <section class="subscription" id="subscription">
           <div class="container">
             <h2>Абонементы</h2>
-            <div class="subscription__nav" data-sub-nav>
-              <button class="subscription__nav-button is-active is-nojs" type="button" data-but="tab-1" data-sub-button>
+            <div class="subscription__nav no-js" data-sub-nav>
+              <button class="btn subscription__nav-button subscription__nav-button--active" type="button">
                 1 месяц
               </button>
-              <button class="subscription__nav-button is-nojs" type="button" data-but="tab-2" data-sub-button>
+              <button class="btn subscription__nav-button" type="button">
                 6 месяцев
               </button>
-              <button class="subscription__nav-button is-nojs" type="button" data-but="tab-3" data-sub-button>
+              <button class="btn subscription__nav-button" type="button">
                 12 месяцев
               </button>
             </div>
+            <!--На 1 месяц-->
             <div class="subscription__content">
-              <div class="subscription__subcontent is-active is-nojs" data-tab="tab-1" data-sub-tab>
+              <div class="subscription__subcontent subscription__subcontent--active"><!--А НУЖНА ЛИ ЗДЕСЬ ОБЕРТКА???-->
+                <div data-sub-time>1 месяц</div>
                 <ul class="subscription__list">
                   <li class="subscription__item" tabindex="0">
                     <h3>С&nbsp;тренером</h3>
                     <span>12&nbsp;занятий</span>
                     <div class="subscription__price">
-                      <b>5000</b>
-                      <p>5000
+                      <p data-price="5000">5000
                         <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="img/sprite.svg#rouble"></use>
@@ -118,8 +119,7 @@
                     <h3>Дневной</h3>
                     <span>с&nbsp;8:00 до&nbsp;17:00</span>
                     <div class="subscription__price">
-                      <b>1700</b>
-                      <p>1700
+                      <p data-price="1700">1700
                         <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="img/sprite.svg#rouble"></use>
@@ -132,8 +132,7 @@
                     <h3>Полный день</h3>
                     <span>с&nbsp;8:00 до&nbsp;22:00</span>
                     <div class="subscription__price">
-                      <b>2700</b>
-                      <p>2700
+                      <p data-price="2700">2700
                         <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="img/sprite.svg#rouble"></use>
@@ -144,14 +143,14 @@
                   </li>
                 </ul>
               </div>
-              <div class="subscription__subcontent is-nojs" data-tab="tab-2" data-sub-tab>
+              <!--На 6 месяцев-->
+              <div class="subscription__subcontent">
                 <ul class="subscription__list">
                   <li class="subscription__item" tabindex="0">
                     <h3>С&nbsp;тренером</h3>
                     <span>12&nbsp;занятий</span>
                     <div class="subscription__price">
-                      <b>30000</b>
-                      <p>30000
+                      <p data-price="30000">30000
                         <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="img/sprite.svg#rouble"></use>
@@ -164,8 +163,7 @@
                     <h3>Дневной</h3>
                     <span>с&nbsp;8:00 до&nbsp;17:00</span>
                     <div class="subscription__price">
-                      <b>10200</b>
-                      <p>10200
+                      <p data-price="10200">10200
                         <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="img/sprite.svg#rouble"></use>
@@ -178,8 +176,7 @@
                     <h3>Полный день</h3>
                     <span>с&nbsp;8:00 до&nbsp;22:00</span>
                     <div class="subscription__price">
-                      <b>16200</b>
-                      <p>16200
+                      <p data-price="16200">16200
                         <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="img/sprite.svg#rouble"></use>
@@ -190,14 +187,14 @@
                   </li>
                 </ul>
               </div>
-              <div class="subscription__subcontent is-nojs" data-tab="tab-3" data-sub-tab>
+              <!--На 12 месяцев-->
+              <div class="subscription__subcontent">
                 <ul class="subscription__list">
                   <li class="subscription__item" tabindex="0">
                     <h3>С&nbsp;тренером</h3>
                     <span>12&nbsp;занятий</span>
                     <div class="subscription__price">
-                      <b>60000</b>
-                      <p>60000
+                      <p data-price="60000">60000
                         <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="img/sprite.svg#rouble"></use>
@@ -210,8 +207,7 @@
                     <h3>Дневной</h3>
                     <span>с&nbsp;8:00 до&nbsp;17:00</span>
                     <div class="subscription__price">
-                      <b>20400</b>
-                      <p>20400
+                      <p data-price="20400">20400
                         <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="img/sprite.svg#rouble"></use>
@@ -224,8 +220,7 @@
                     <h3>Полный день</h3>
                     <span>с&nbsp;8:00 до&nbsp;22:00</span>
                     <div class="subscription__price">
-                      <b>32400</b>
-                      <p>32400
+                      <p data-price="32400">32400
                         <svg class="subscription__rouble" aria-hidden="true" focusable="false" width="30" height="42"
                           xmlns="http://www.w3.org/2000/svg">
                           <use href="img/sprite.svg#rouble"></use>

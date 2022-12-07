@@ -1,0 +1,159 @@
+.subscription {
+  background-color: $color-ghost-white;
+}
+
+.subscription h2 {
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  display: flex;
+  justify-content: center;
+}
+
+.subscription__nav {
+  display: flex;
+  text-align: center;
+  position: relative;
+  width: fit-content;
+  column-gap: 46px;
+  margin: 0 auto 38px;
+  padding: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgba(120, 120, 120, 0.2);
+  }
+}
+
+.subscription__nav-button {
+  font-family: $ff-secondary;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  display: inline-block;
+  position: relative;
+  padding: 12px 0 13px;
+  width: fit-content;
+  opacity: 0.5;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+  }
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &--active {
+    opacity: 1;
+
+    &::after {
+      background-color: $color-crimson;
+    }
+  }
+}
+
+[data-sub-nav].no-js {
+  display: none;
+}
+
+.subscription__subcontent {
+  &--close {
+    display: none;
+  }
+
+  &--active {
+    display: block;
+  }
+}
+
+.subscription__content h3 {
+  display: flex;
+  justify-content: center;
+  font-family: $ff-secondary;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+}
+
+.subscription__content span {
+  display: flex;
+  justify-content: center;
+  font-family: $ff-secondary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $color-chambray;
+}
+
+.subscription__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.subscription__item {
+  padding: 56px 77px 68px;
+  border: 7px solid transparent;
+  border-image-source: none;
+  border-image-slice: 1;
+  list-style-type: none;
+  background-color: $color-default-white;
+
+  &:hover,
+  &:focus-within {
+    border-image-source: $blue-to-red-border;
+  }
+}
+
+.subscription__item:hover .subscription__link,
+.subscription__item:focus-within .subscription__link {
+  background: $blue-to-red;
+  color: $color-default-white;
+}
+
+.subscription__item:hover .subscription__link:hover,
+.subscription__item:focus-within .subscription__link:hover {
+  color: $color-default-black;
+}
+
+.subscription__price p {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-family: $ff-secondary;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 150%;
+  color: $color-egyptian-blue;
+  position: relative;
+  z-index: 1;
+
+  &::before {
+    content: attr(data-price);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    line-height: 150px;
+    font-weight: 700;
+    color: $color-whisper;
+    z-index: -1;
+  }
+}
+
