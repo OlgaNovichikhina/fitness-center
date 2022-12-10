@@ -1,0 +1,361 @@
+.coaches__container {
+  position: relative;
+  padding-top: 33px;
+
+  @include vp-1199 {
+    padding: 36px 101px;
+  }
+
+  @include vp-767 {
+    padding: 10px 47px;
+  }
+}
+
+.coaches h2 {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  margin-bottom: 46px;
+  margin-left: 2px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-left: -6px;
+    text-align: center;
+    margin-bottom: 31px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-top: 45px;
+    margin-bottom: 41px;
+  }
+}
+
+.coaches__wrapper {
+  position: relative;
+}
+
+.coaches__list {
+  margin: 0;
+  padding: 0;
+}
+
+.coaches__item {
+  width: 100%;
+  display: block;
+  position: relative;
+  list-style-type: none;
+  cursor: pointer;
+  background-color: $color-echo-blue;
+
+  scrollbar-color: $color-chambray $color-default-black; /* «цвет ползунка» «цвет полосы скроллбара» */
+  scrollbar-width: thin;  /* толщина */
+  overflow: hidden;
+  margin: 0 auto;
+
+  ::-webkit-scrollbar {
+    width: 3px; /* ширина для вертикального скролла */
+    background-color: transparent;
+  }
+
+  /* ползунок скроллбара */
+  ::-webkit-scrollbar-thumb {
+    background-color: $color-default-black;
+    border-radius: 3em;
+  }
+
+  aspect-ratio: 260/294;
+
+  @include vp-1199 {
+    min-height: 294px;
+    aspect-ratio: 268/294;
+  }
+
+  @include vp-767 {
+    min-height: 274px;
+    aspect-ratio: 226/274;
+  }
+}
+
+.coaches__item img {
+  width: 100%;
+  object-fit: cover;
+
+  @include vp-1199 {
+    min-height: 294px;
+  }
+
+  @include vp-767 {
+    min-height: 274px;
+  }
+}
+
+.coaches__item--mary img {
+  transform: scale(1.05);
+  object-position: 1px 6px;
+
+  @include vp-1199 {
+    transform: scale(1);
+    object-position: 0 0;
+  }
+}
+
+.coaches__description-wrapper {
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 38, 84, 0.89);
+  display: none;
+  padding-bottom: 82px;
+
+  @include vp-767 {
+    padding-bottom: 75px;
+  }
+}
+
+
+.coaches__description {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 2px 20px 10px 55px;
+  color: $color-default-white;
+  display: none;
+  flex-direction: column;
+
+  @include vp-1199 {
+    padding: 0 52px 19px 55px;
+  }
+
+  @include vp-767 {
+    padding: 0 31px 20px 33px;
+  }
+}
+
+.coaches__item h3 {
+  font-family: $ff-secondary;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 150%;
+  width: 100%;
+  position: absolute;
+  height: min-content;
+  color: #f9fbfd;
+  z-index: 1;
+  bottom: 3px;
+  text-align: center;
+
+  @include vp-1199 {
+    bottom: 5px;
+    left: 4px;
+  }
+
+  @include vp-767 {
+    bottom: 0;
+    left: 25px;
+  }
+}
+
+.coaches__item p {
+  font-family: $ff-secondary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: $color-spindle;
+  margin: -6px 0 34px -33px;
+  padding: 0;
+  text-align: center;
+
+  @include vp-1199 {
+    margin: -6px 0 34px -9px;
+  }
+
+  @include vp-767 {
+    margin: -4px 0 33px 2px;
+  }
+}
+
+.coaches__item ul {
+  margin: 0;
+  padding: 0;
+}
+
+.coaches__item li {
+  position: relative;
+  margin-bottom: 13px;
+  padding-left: 16px;
+  list-style-type: none;
+  font-family: $ff-secondary;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: $color-default-white;
+  }
+}
+
+.coaches__item:hover h3,
+.coaches__item:focus h3,
+.coaches__item:focus-within h3 {
+  background: rgba(16, 38, 84, 0.89);
+  position: static;
+  align-self: flex-start;
+  height: fit-content;
+  margin: 0;
+  width: 100%;
+  padding: 52px 25px 0;
+  opacity: 1;
+
+  @include vp-1199 {
+    padding: 52px 44px 0 35px;
+  }
+
+  @include vp-767 {
+    padding: 42px 25px 0;
+  }
+}
+
+.coaches__item:hover,
+.coaches__item:focus,
+.coaches__item:focus-visible {
+  background-color: transparent;
+}
+
+.coaches__item:hover img,
+.coaches__item:focus img,
+.coaches__item:focus-visible img {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.coaches__item--alexsandr:hover img,
+.coaches__item--alexsandr:focus img,
+.coaches__item--alexsandr:focus-visible img {
+  transform: matrix(-1, 0, 0, 1, 0, 0) scale(100%, 100%) translate(0, 0);
+
+  @include vp-1199 {
+    transform: matrix(-1, 0, 0, 1, 0, 0) scale(101%, 102%) translate(-1px, -8px);
+  }
+
+  @include vp-1199 {
+    transform: matrix(-1, 0, 0, 1, 0, 0) scale(100%, 104%) translate(2px, 0);
+  }
+}
+
+.coaches__item--mary:hover img,
+.coaches__item--mary:focus img,
+.coaches__item--mary:focus-visible img {
+  transform: matrix(-1, 0, 0, 1, 0, 0) scale(1.05);
+  object-position: 1px 6px;
+
+  @include vp-1199 {
+    transform: scale(1);
+    object-position: 0 0;
+  }
+}
+
+.coaches__item:hover .coaches__description-wrapper,
+.coaches__item:focus .coaches__description-wrapper,
+.coaches__item:focus-visible .coaches__description-wrapper {
+  display: block;
+  overflow-y: auto;
+  overflow-x: visible;
+}
+
+.coaches__item:hover .coaches__description,
+.coaches__item:focus .coaches__description,
+.coaches__item:focus-visible .coaches__description {
+  display: flex;
+}
+
+.coaches__button {
+  padding: 5px;
+  position: absolute;
+  width: 46px;
+  height: 45px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  fill: none;
+  stroke: $color-dark-gray;
+
+  @include vp-1199 {
+    top: 57.3%;
+  }
+
+  @include vp-767 {
+    top: 60.3%;
+    width: 32px;
+  }
+
+  &--prev {
+    left: 31px;
+    top: 61.3%;
+
+    @include vp-1199 {
+      left: 30px;
+    }
+
+    @include vp-767 {
+      left: 4px;
+    }
+  }
+
+  &--next {
+    right: 31px;
+    top: 61.3%;
+
+    @include vp-1199 {
+      right: 31px;
+    }
+
+    @include vp-767 {
+      right: 4px;
+    }
+  }
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+}
+
+.coaches__icon {
+  width: 16px;
+  height: 32px;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+
+  @include vp-767 {
+    width: 10px;
+    height: 19px;
+  }
+}

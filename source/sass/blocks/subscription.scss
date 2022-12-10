@@ -1,11 +1,10 @@
 .subscription {
   background-color: $color-ghost-white;
+  position: relative;
 }
 
 .subscription__container {
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
+  padding: 30px 103px 121px;
 
   @include vp-1199 {
     padding: 30px 163px;
@@ -125,6 +124,11 @@
   display: none;
 }
 
+.subscription__content {
+  position: relative;
+  z-index: 1;
+}
+
 .subscription__subcontent {
   &--close {
     display: none;
@@ -195,6 +199,7 @@
   border-image-slice: 1;
   list-style-type: none;
   background-color: $color-default-white;
+  overflow: hidden;
 
   @include vp-767 {
     min-height: 384px;
@@ -289,20 +294,15 @@
 }
 
 .subscription img {
-  z-index: -1;
   display: block;
-  width: 321px;
-  height: 384px;
   position: absolute;
-  bottom: -184px;
-  right: -108px;
-  transform: rotate(150deg);
+  bottom: -149px;
+  right: 0;
 
   @include vp-1199 {
-    width: 289px;
-    height: 345px;
-    bottom: -176px;
-    right: -10px;
+    width: 347px;
+    height: 444px;
+    bottom: -195px;
   }
 
   @include vp-767 {

@@ -2,6 +2,7 @@ import {iosVhFix} from './utils/ios-vh-fix';
 import {scrollPage} from './modules/scroll';
 import {addIframe} from './modules/video';
 import {onClickTab} from './modules/tabs';
+import {swipeCoachSwiper} from './vendor';
 
 // ---------------------------------
 
@@ -13,7 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
   scrollPage();
   addIframe();
   onClickTab();
-
+  swipeCoachSwiper();
   // Modules
   // ---------------------------------
 
