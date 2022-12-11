@@ -1,4 +1,6 @@
 // Swiper 7.4.1
+/* global Swiper */
+/* eslint-disable no-unused-vars */
 import './vendor/swiper.js';
 
 const coachSwiper = document.querySelector('.coaches__wrapper');
@@ -9,8 +11,9 @@ const swipeCoachSwiper = () => {
       direction: 'horizontal',
       loop: true,
       allowTouchMove: true,
-      focusableElements: 'input, select, option, textarea, button, video, label',
       autoHeight: true,
+      watchOverflow: true,
+      watchSlidesProgress: true,
       breakpoints: {
         320: {
           slidesPerView: 1,
@@ -35,7 +38,6 @@ const swipeCoachSwiper = () => {
   }
 
   const slidesDuplicate = document.querySelectorAll('.swiper-slide-duplicate');
-
   slidesDuplicate.forEach((el) => {
     el.removeAttribute('tabindex');
   });
