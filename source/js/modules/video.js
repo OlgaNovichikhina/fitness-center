@@ -1,12 +1,12 @@
-const video = document.querySelector('[data-video]');
-const videoButton = video ? video.querySelector('[data-video-button]') : null;
+const VIDEO = document.querySelector('[data-video]');
+const VIDEO_BUTTON = VIDEO ? VIDEO.querySelector('[data-video-button]') : null;
 
 const generateURL = () => {
-  if (!video) {
+  if (!VIDEO) {
     return '';
   }
 
-  let url = video.getAttribute('data-url');
+  let url = VIDEO.getAttribute('data-url');
   let query = '?rel=0&showinfo=0&autoplay=1&mute=1';
   return 'https://www.youtube.com/embed/' + url + query;
 };
@@ -19,21 +19,20 @@ const createIframe = () => {
   iframe.setAttribute('src', generateURL());
   iframe.setAttribute('frameborder', '0');
   iframe.classList.add('gym__iframe');
-  // iframe.setAttribute('tabindex', '-1');
 
   return iframe;
 };
 
 const addIframe = () => {
-  if (!videoButton) {
+  if (!VIDEO_BUTTON) {
     return;
   }
 
-  videoButton.addEventListener('click', () => {
+  VIDEO_BUTTON.addEventListener('click', () => {
     let iframe = createIframe();
 
-    videoButton.remove();
-    video.appendChild(iframe);
+    VIDEO_BUTTON.remove();
+    VIDEO.appendChild(iframe);
   });
 };
 

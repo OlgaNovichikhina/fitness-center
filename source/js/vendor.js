@@ -3,11 +3,38 @@
 /* eslint-disable no-unused-vars */
 import './vendor/swiper.js';
 
-const coachSwiper = document.querySelector('.coaches__wrapper');
+const COACHES_SWIPER = document.querySelector('.coaches__wrapper');
+const COACHES_LIST = document.querySelector('.coaches__list');
+const COACHES_BUTTONS = document.querySelectorAll('.coaches__button');
+
+const REVIEWS_SWIPER = document.querySelector('.reviews__wrapper');
+const REVIEWS_LIST = document.querySelector('.reviews__list');
+const REVIEWS_BUTTONS = document.querySelectorAll('.reviews__button');
+
+
+function deleteTabindex() {
+  const SLIDES_DUPLICATE = document.querySelectorAll('.swiper-slide-duplicate');
+
+  SLIDES_DUPLICATE.forEach((slide) => {
+    slide.removeAttribute('tabindex');
+  });
+}
+
+function deleteClassNoJS(elem, navButtons) {
+  elem.classList.remove('no-js');
+
+  navButtons.forEach((button) => {
+    button.style.display = 'block';
+  });
+}
 
 const swipeCoachSwiper = () => {
-  if (coachSwiper) {
-    const swiper = new Swiper(coachSwiper, {
+
+  deleteClassNoJS(COACHES_LIST, COACHES_BUTTONS);
+
+
+  if (COACHES_SWIPER) {
+    const swiper = new Swiper(COACHES_SWIPER, {
       direction: 'horizontal',
       loop: true,
       allowTouchMove: true,
@@ -36,17 +63,15 @@ const swipeCoachSwiper = () => {
       },
     });
   }
-
-  const slidesDuplicate = document.querySelectorAll('.swiper-slide-duplicate');
-  slidesDuplicate.forEach((el) => {
-    el.removeAttribute('tabindex');
-  });
+  deleteTabindex();
 };
 
-/*
-const checkReviewsSwiper = () => {
-  if (reviewsSwiper) {
-    const swiper = new Swiper(reviewsSwiper, {
+const swipeReviewsSwiper = () => {
+
+  deleteClassNoJS(REVIEWS_LIST, REVIEWS_BUTTONS);
+
+  if (REVIEWS_SWIPER) {
+    const swiper = new Swiper(REVIEWS_SWIPER, {
 
       // Navigation arrows
       navigation: {
@@ -57,6 +82,6 @@ const checkReviewsSwiper = () => {
       slidesPerView: 1,
     });
   }
-};*/
+};
 
-export {swipeCoachSwiper};
+export {swipeCoachSwiper, swipeReviewsSwiper};

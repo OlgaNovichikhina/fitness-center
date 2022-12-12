@@ -1,0 +1,241 @@
+.stock__container {
+  padding: 107px 103px 44px;
+
+  @include vp-1199 {
+    padding: 58px 45px;
+  }
+
+  @include vp-767 {
+    padding: 38px 15px;
+  }
+}
+
+.stock h2 {
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 65px;
+  letter-spacing: 0.03em;
+  text-align: center;
+  margin-bottom: 32px;
+
+  @include vp-1199 {
+    font-size: 42px;
+    line-height: 50px;
+    margin-left: -9px;
+    margin-bottom: 39px;
+  }
+
+  @include vp-767 {
+    font-size: 32px;
+    line-height: 38px;
+    margin-left: -6px;
+    margin-bottom: 41px;
+  }
+}
+
+.stock__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  @include vp-1199 {
+    gap: 30px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stock__item {
+  min-height: 211px;
+  display: flex;
+  flex-direction: column;
+  border: 7px solid transparent;
+  border-image-source: $blue-to-red-border;
+  border-image-slice: 1;
+  padding: 18px 28px 29px;
+
+  @include vp-767 {
+    padding: 28px 28px 40px;
+  }
+}
+
+.stock__item h3 {
+  font-family: $ff-secondary;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 150%;
+  color: $color-resolution-blue;
+  margin-top: 0;
+  margin-bottom: 3px;
+
+  @include vp-767 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+
+.stock__item p {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-family: $ff-secondary;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 140%;
+  color: $color-resolution-blue;
+
+  @include vp-767 {
+    text-align: center;
+    margin-top: -6px;
+  }
+}
+
+.stock__item--promo {
+  padding: 0;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row: 1 / span 2;
+
+  @include vp-1199 {
+    min-height: 462px;
+    grid-template-columns: 41.2% 1fr;
+    grid-column: 1 / -1;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 0;
+  }
+}
+
+.stock__link {
+  margin-top: auto;
+  width: fit-content;
+  position: relative;
+  font-family: $ff-secondary;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: $color-resolution-blue;
+  transition: 0.5s;
+
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: $color-resolution-blue;
+    bottom: -2px;
+    left: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    transform: scale(1.2);
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  &--promo {
+    font-size: 14px;
+    color: $color-default-white;
+    line-height: 16px;
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+
+  @include vp-767 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.stock__item--promo h3 {
+  font-family: $ff-secondary;
+  color: $color-default-white;
+  font-size: 28px;
+  line-height: 156%;
+  margin: 0 0 -25px;
+
+  @include vp-767 {
+    margin: 0 0 -25px;
+  }
+}
+
+.stock__item--promo span {
+  font-family: $ff-secondary;
+  font-weight: 700;
+  font-size: 70px;
+  line-height: 156%;
+  color: $color-default-white;
+
+  @include vp-767 {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.stock__item--promo p {
+  margin-top: 0;
+  margin-bottom: 187px;
+  font-family: $ff-secondary;
+  font-size: 18px;
+  color: $color-default-white;
+
+  @include vp-767 {
+    margin-bottom: 30px;
+  }
+}
+
+.stock__img-wrapper {
+  width: 100%;
+  overflow: hidden;
+  background-color: $color-cornflower-blue;
+}
+
+.stock__item--promo img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  aspect-ratio: 280/462;
+
+  @include vp-1199 {
+    aspect-ratio: 399/462;
+    width: 100%;
+  }
+
+  @include vp-767 {
+    width: 100%;
+    aspect-ratio: 290/299;
+  }
+}
+
+.stock__item-description {
+  background-color: $color-torch-red;
+  padding: 34px 45px;
+
+  @include vp-1199 {
+    padding: 34px 41px 34px 45px;
+  }
+
+  @include vp-767 {
+    padding: 35px 47px 47px;
+  }
+}
+

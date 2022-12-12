@@ -11,6 +11,12 @@
   }
 }
 
+.header__container {
+  @include vp-767 {
+    padding: 10px 13px;
+  }
+}
+
 .header__top {
   display: flex;
   justify-content: space-between;
@@ -48,7 +54,6 @@
 .header__link {
   position: relative;
   font-family: $ff-main;
-  font-style: normal;
   font-weight: 600;
   font-size: 26px;
   line-height: 31px;
@@ -78,22 +83,18 @@
     right: 0;
     bottom: -3px;
     width: 0;
-    height: 2px; /* Высота линии */
-    background-color: $color-default-black; /* Цвет подчеркивания при исчезании линии*/
-    transition: width 0.5s; /* Время эффекта */
+    height: 2px;
+    background-color: $color-default-black;
+    transition: width 0.5s;
   }
 
   &:hover::after,
   &:focus-visible::after {
     content: "";
     width: 100%;
-    display: block;
-    position: absolute;
     left: 0;
-    bottom: -3px;
-    height: 2px; /* Высота линии */
-    background-color: $color-default-white; /* Цвет подчеркивания при появлении линии*/
-    transition: width 0.5s;  /* Время эффекта */
+    height: 2px;
+    background-color: $color-default-white;
   }
 
   &:active {
