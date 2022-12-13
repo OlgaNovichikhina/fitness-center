@@ -3,6 +3,7 @@ import {scrollPage} from './modules/scroll';
 import {addIframe} from './modules/video';
 import {onClickTab} from './modules/tabs';
 import {swipeCoachSwiper, swipeReviewsSwiper} from './vendor';
+import {inputFormTel, inputFormName} from './modules/form';
 
 // ---------------------------------
 
@@ -16,6 +17,9 @@ window.addEventListener('DOMContentLoaded', () => {
   onClickTab();
   swipeCoachSwiper();
   swipeReviewsSwiper();
+  inputFormTel();
+  inputFormName();
+
   // Modules
   // ---------------------------------
 

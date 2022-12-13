@@ -28,6 +28,8 @@ const addIframe = () => {
     return;
   }
 
+  VIDEO_BUTTON.style.display = 'block';
+
   VIDEO_BUTTON.addEventListener('click', () => {
     let iframe = createIframe();
 

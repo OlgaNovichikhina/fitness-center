@@ -76,13 +76,11 @@
                   <source srcset="./img/content/video.webp, img/content/video@2x.webp 2x" type="image/webp">
                   <img src="./img/content/video.png" srcset="img/content/video@2x.png 2x" width="364" height="228" alt="Постер видео." data-video-poster>
                 </picture>
-                <button class="btn gym__button is-nojs" data-video-button type="button" aria-label="Включить видео">
-                </button>
+                <button class="btn gym__button is-nojs" data-video-button type="button" aria-label="Включить видео"></button>
               </div>
             </div>
           </div>
         </section>
-
         <section class="subscription" id="subscription">
           <div class="container subscription__container">
             <h2>Абонементы</h2>
@@ -235,7 +233,6 @@
             </picture>
           </div>
         </section>
-
         <section class="promo" id="promo">
           <div class="container promo__container">
             <div class="promo__info-wrapper">
@@ -269,7 +266,6 @@
             </div>
           </div>
         </section>
-
         <section class="coaches">
           <div class="container coaches__container">
             <h2>Тренеры</h2>
@@ -431,7 +427,6 @@
             </button>
           </div>
         </section>
-
         <section class="advantages">
           <div class="container advantages__container">
             <h2>Наши преимущества</h2>
@@ -484,7 +479,6 @@
             </ul>
           </div>
         </section>
-
         <section class="stock">
           <div class="container stock__container">
             <h2>Акции</h2>
@@ -524,7 +518,6 @@
             </ul>
           </div>
         </section>
-
         <section class="reviews">
           <div class="container reviews__container">
             <h2>Отзывы</h2>
@@ -544,7 +537,7 @@
                     </picture>
                   </div>
                   <h3>Анна Орлова</h3>
-                  <blockquote> «Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей»</blockquote>
+                  <blockquote>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
                 </li>
                 <li class="swiper-slide reviews__item">
                   <div class="reviews__img-wrapper">
@@ -554,7 +547,7 @@
                     </picture>
                   </div>
                   <h3>Анна Орлова-2</h3>
-                  <blockquote> «Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей»</blockquote>
+                  <blockquote>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
                 </li>
                 <li class="swiper-slide reviews__item">
                   <div class="reviews__img-wrapper">
@@ -563,8 +556,8 @@
                       <img loading="lazy" src="./img/content/author-review.jpg" srcset="./img/content/author-review@2x.jpg 2x" width="80" height="80" alt="Фотография девушки, оставившей отзыв.">
                     </picture>
                   </div>
-                  <h3>Анна Орлова-3</h3>
-                  <blockquote> «Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в&nbsp;вечернее время нет очередей»</blockquote>
+                  <h3>Анна Орлова-3 Анна Орлова-3</h3>
+                  <blockquote>«Хожу в SuperClub уже больше года. Нравится, что в клубе всегда чисто, тренажеры обновляют, персонал дружелюбный. Зал просторный, даже в вечернее время нет очередей»</blockquote>
                 </li>
               </ul>
             </div>
@@ -577,6 +570,43 @@
           </div>
         </section>
 
+        <section class="form-contacts">
+          <div class="form-contacts__form form">
+            <h2>Бесплатное занятие</h2>
+            <form action="https://echo.htmlacademy.ru" method="post">
+              <label>
+                <span class="visually-hidden">Напишите свое имя.</span>
+                <input placeholder="Имя" type="text" name="name" minlength="1" maxlength="100" required pattern="^[a-zA-Zа-яёА-ЯЁ\s-]+$" title="Имя может состоять из букв латиницы и кириллицы, пробела, дефиса и содержать не менее 1 символа">
+              </label>
+              <label>
+                <span class="visually-hidden">Напишите свой номер телефона.</span>
+                <input placeholder="Телефон" type="tel" name="phone" required pattern="^[0-9\s)(+)-]+$" title="Номер телефона может содержать цифры, открывающую и закрывающую круглые скобки, пробел и знаки + и -">
+              </label>
+              <button class="btn form__button" type="submit">Отправить</button>
+            </form>
+          </div>
+          <div class="form-contacts__contacts contacts">
+            <h2>Контакты</h2>
+            <ul class="contacts__list">
+              <li class="contacts__item">
+                <h3>Адрес:</h3>
+                <p>г. Омск, ул. 60 лет Октября, 7</p>
+              </li>
+              <li class="contacts__item contacts__item--phone">
+                <h3>Телефон:</h3>
+                <a class="contacts__link" href="tel:+88005555555">8-800-555-55-55</a>
+              </li>
+              <li class="contacts__item">
+                <h3>График работы:</h3>
+                <p>Пн-Вс: с 8:00 до 22:00</p>
+              </li>
+              <li class="contacts__item">
+                <h3>Email:</h3>
+                <a class="contacts__link" href="mailto:omsk@supergym.ru">omsk@supergym.ru</a>
+              </li>
+            </ul>
+          </div>
+        </section>
       </main>
       <footer class="footer">
         <div class="container footer__container">

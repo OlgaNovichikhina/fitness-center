@@ -1,0 +1,15 @@
+.form-contacts {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  @include vp-1199 {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.form-contacts__container {
+  padding-left: 0;
+  padding-right: 0;
+}

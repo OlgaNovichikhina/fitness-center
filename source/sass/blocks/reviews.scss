@@ -1,7 +1,29 @@
+.reviews {
+  padding-bottom: 90px;
+
+  @include vp-1199 {
+    padding-bottom: 70px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 8px;
+  }
+}
+
 .reviews__container {
   position: relative;
-  max-width: 766px;
+  max-width: 672px;
+  width: 100%;
   margin: 0 auto;
+  padding: 30px 56px;
+
+  @include vp-1199 {
+    max-width: 85.5%;
+  }
+
+  @include vp-767 {
+    max-width: 80.5%;
+  }
 }
 
 .reviews h2 {
@@ -16,13 +38,17 @@
   @include vp-1199 {
     font-size: 42px;
     line-height: 50px;
-    margin-left: -23px;
+    margin-left: -6px;
+    margin-top: 5px;
+    margin-bottom: 39px;
   }
 
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
-    margin-left: -18px;
+    margin-left: -4px;
+    margin-top: 16px;
+    margin-bottom: 42px;
   }
 }
 
@@ -34,12 +60,22 @@
 
 .reviews__item {
   display: grid;
-  grid-template-columns: 18.4% 1fr;
+  grid-template-columns: 80px 1fr;
   column-gap: 28px;
   background: $color-resolution-blue;
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
-  min-height: 242px;
-  padding: 50px 62px;
+  padding: 50px 62px 57px;
+
+  @include vp-1199 {
+    padding: 49px 63px 58px 66px;
+  }
+
+  @include vp-767 {
+    grid-template-columns: 85px 1fr;
+    column-gap: 15px;
+    row-gap: 12px;
+    padding: 40px 25px 33px;
+  }
 }
 
 .reviews__item h3 {
@@ -49,10 +85,11 @@
   line-height: 150%;
   color: $color-default-white;
   margin-top: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 11px;
 
   @include vp-767 {
     line-height: 130%;
+    margin-top: 7px;
   }
 }
 
@@ -63,14 +100,31 @@
   line-height: 140%;
   color: $color-default-white;
   margin: 0;
+
+  @include vp-767 {
+    grid-column: 1/ span 2;
+    text-align: center;
+  }
 }
 
 .reviews__img-wrapper {
   grid-row: 1/ span 2;
+
+  @include vp-767 {
+    grid-row: 1/ 2;
+  }
 }
 
 .reviews__img-wrapper img {
+  width: 100%;
+  object-fit: cover;
   margin-top: 13px;
+
+  @include vp-767 {
+    width: 68px;
+    margin-top: 0;
+    margin-left: auto;
+  }
 }
 
 .reviews__button {
@@ -87,7 +141,7 @@
   top: 275px;
 
   @include vp-1199 {
-    top: 277px;
+    top: 223px;
   }
 
   @include vp-767 {
@@ -96,26 +150,26 @@
   }
 
   &--prev {
-    left: 31px;
+    left: -16px;
 
     @include vp-1199 {
-      left: 31px;
+      left: -26px;
     }
 
     @include vp-767 {
-      left: 4px;
+      left: -27px;
     }
   }
 
   &--next {
-    right: 31px;
+    right: -16px;
 
     @include vp-1199 {
-      right: 31px;
+      right: -26px;
     }
 
     @include vp-767 {
-      right: 4px;
+      right: -27px;
     }
   }
 
