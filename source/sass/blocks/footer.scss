@@ -1,0 +1,49 @@
+.footer {
+  background-color: $color-black-russian;
+}
+
+.footer__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 38px;
+  padding-bottom: 24px;
+
+  @include vp-1199 {
+    padding: 42px 38px 24px;
+  }
+
+  @include vp-767 {
+    flex-direction: column;
+    padding: 23px 10px 40px;
+  }
+}
+
+.footer__logo {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  width: 88px;
+  margin-top: 13px;
+
+  @include vp-1199 {
+    width: 82px;
+    margin-top: 7px;
+  }
+
+  @include vp-767 {
+    width: 68px;
+    position: relative;
+    top: 22px;
+  }
+}
+
+.footer__logo img {
+  @include vp-1199 {
+    margin-left: 7px;
+  }
+
+  @include vp-767 {
+    margin-left: 4px;
+  }
+}

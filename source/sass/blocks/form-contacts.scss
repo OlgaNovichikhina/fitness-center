@@ -2,8 +2,10 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  padding-bottom: 0;
 
   @include vp-1199 {
+    padding-bottom: 26px;
     display: flex;
     flex-direction: column;
   }
