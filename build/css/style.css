@@ -2513,7 +2513,7 @@ button,
   position: relative;
 }
 
-.advantages__item:nth-last-child(n+3)::before {
+.advantages__item:nth-last-child(n+4)::before {
   content: "";
   position: absolute;
   width: 100%;
