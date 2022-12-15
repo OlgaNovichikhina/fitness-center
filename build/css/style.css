@@ -1884,6 +1884,7 @@ button,
   width: fit-content;
   opacity: 0.5;
   background-color: transparent;
+  max-width: 100px;
 }
 
 .subscription__nav-button::after {
@@ -2116,6 +2117,10 @@ button,
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  max-width: 100px;
 }
 
 .promo__wrapper dd {
@@ -2134,6 +2139,7 @@ button,
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  max-width: 100px;
   margin-bottom: 10px;
 }
 
@@ -2378,6 +2384,8 @@ button,
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
   -ms-transform: matrix(-1, 0, 0, 1, 0, 0);
   transform: matrix(-1, 0, 0, 1, 0, 0);
+  -webkit-box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
+  box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
 }
 
 .coaches__item:hover .coaches__description-wrapper,
@@ -2520,13 +2528,9 @@ button,
   display: none;
 }
 
-.advantages__item:nth-child(1) .advantages__accent,
-.advantages__item:nth-child(2n) .advantages__accent {
+.advantages__item--comfort,
+.advantages__item--space {
   margin-left: 18px;
-}
-
-.advantages__item:nth-child(2) .advantages__accent {
-  margin-left: 0;
 }
 
 .advantages__accent {
@@ -3342,26 +3346,7 @@ button,
 */
 
 @media (min-width: 1200px) {
-  .advantages__item:nth-child(2n+1) {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3/4;
-  }
-
-  .advantages__item:nth-child(1),
-  .advantages__item:nth-child(2n) {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1/2;
-  }
-
-  .advantages__item:nth-child(2) {
-    -ms-grid-column: 3;
-    -ms-grid-column-span: 1;
-    grid-column: 3/4;
-  }
-
-  .advantages__item:nth-child(3) {
+  .advantages__item--center {
     -ms-grid-row: 1;
     -ms-grid-row-span: 2;
     grid-row: 1/span 2;
@@ -3691,11 +3676,6 @@ button,
   .advantages__item::before,
   .advantages__item::after {
     display: none;
-  }
-
-  .advantages__item:nth-child(1) .advantages__accent,
-  .advantages__item:nth-child(2n) .advantages__accent {
-    margin-left: 0;
   }
 
   .advantages__accent {

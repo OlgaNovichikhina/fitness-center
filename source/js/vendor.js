@@ -1,6 +1,5 @@
 // Swiper 7.4.1
 /* global Swiper */
-/* eslint-disable no-unused-vars */
 import './vendor/swiper.js';
 
 const COACHES_SWIPER = document.querySelector('.coaches__wrapper');

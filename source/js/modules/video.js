@@ -13,14 +13,14 @@ const generateURL = () => {
 
 
 const createIframe = () => {
-  const iframe = document.createElement('iframe');
+  const IFRAME = document.createElement('iframe');
 
-  iframe.setAttribute('allowfullscreen', '');
-  iframe.setAttribute('src', generateURL());
-  iframe.setAttribute('frameborder', '0');
-  iframe.classList.add('gym__iframe');
+  IFRAME.setAttribute('allowfullscreen', '');
+  IFRAME.setAttribute('src', generateURL());
+  IFRAME.setAttribute('frameborder', '0');
+  IFRAME.classList.add('gym__iframe');
 
-  return iframe;
+  return IFRAME;
 };
 
 const addIframe = () => {

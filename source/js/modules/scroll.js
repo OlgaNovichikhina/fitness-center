@@ -1,7 +1,7 @@
-const anchors = document.querySelectorAll('a[data-anchor]');
+const ANCHOR = document.querySelectorAll('a[data-anchor]');
 
 function scrollPage() {
-  for (let anchor of anchors) {
+  for (let anchor of ANCHOR) {
     anchor.addEventListener('click', function (evt) {
       evt.preventDefault();
 

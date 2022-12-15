@@ -77,6 +77,7 @@
   width: fit-content;
   opacity: 0.5;
   background-color: transparent;
+  max-width: 100px;
 
   &::after {
     content: "";

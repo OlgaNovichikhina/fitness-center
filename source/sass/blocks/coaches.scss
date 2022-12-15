@@ -237,6 +237,7 @@
   left: 0;
   z-index: -1;
   transform: matrix(-1, 0, 0, 1, 0, 0);
+  box-shadow: 0 0 35px rgba(42, 59, 99, 0.17);
 }
 
 .coaches__item:hover .coaches__description-wrapper,
