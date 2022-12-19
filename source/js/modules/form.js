@@ -3,7 +3,7 @@ function inputFormTel() {
 
   INPUT_TEL.forEach(function (item) {
     item.addEventListener('input', () => {
-      const value = item.value.replace(/[^0-9\s)(+)\-]/g, ''); // ограничивает ввод всех символов кроме указанных
+      const value = item.value.replace(/[^0-9\s)(+\-]/g, ''); // ограничивает ввод всех символов кроме указанных
       const numberLength = 100;
 
       let result = '';
