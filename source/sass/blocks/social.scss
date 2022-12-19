@@ -27,7 +27,7 @@
 
   &:hover .social__icon,
   &:focus-visible .social__icon {
-    scale: 1.1;
+    transform: scale(1.1);
   }
 
   &:active {

@@ -1,47 +1,46 @@
-
-const TAB_BUTTON = document.querySelectorAll('.subscription__nav-button');
-const TAB_NAV = document.querySelector('.subscription__nav');
-const TAB_CONTENT = document.querySelectorAll('.subscription__subcontent');
+const TAB_BUTTONS = document.querySelectorAll('[data-sub-button]');
+const TAB_CONTENTS = document.querySelectorAll('[data-sub-tab]');
+const TAB_NAVIGATION = document.querySelector('[data-sub-nav]');
 const SUB_TITLE = document.querySelectorAll('[data-sub-title]');
 
-function hideTabContent(tab) {
-  for (let i = tab; i < TAB_CONTENT.length; i++) {
-    SUB_TITLE[tab].style.display = 'flex';
-    TAB_CONTENT[i].classList.remove('subscription__subcontent--active');
-    TAB_BUTTON[i].classList.remove('subscription__nav-button--active');
-    TAB_CONTENT[i].classList.add('subscription__subcontent--close');
-    TAB_BUTTON[i].classList.add('subscription__nav-button--close');
-  }
-}
-
-function showTabContent(tab) {
-  if (!TAB_CONTENT[tab].classList.contains('subscription__subcontent--active')) {
-    SUB_TITLE[tab].style.display = 'none';
-    TAB_CONTENT[tab].classList.add('subscription__subcontent--active');
-    TAB_BUTTON[tab].classList.add('subscription__nav-button--active');
-    TAB_CONTENT[tab].classList.remove('subscription__subcontent--close');
-    TAB_BUTTON[tab].classList.remove('subscription__nav-button--close');
-  }
-}
-
-function onClickTab() {
-  hideTabContent(1);
-  SUB_TITLE[0].style.display = 'none';
-  TAB_NAV.classList.remove('no-js');
-  TAB_NAV.addEventListener('click', function (evt) {
-    evt.preventDefault();
-    let target = evt.target;
-    if (target && target.classList.contains('subscription__nav-button')) {
-      for (let i = 0; i < TAB_BUTTON.length; i++) {
-        if (target === TAB_BUTTON[i]) {
-          hideTabContent(0);
-          showTabContent(i);
-          break;
-        }
-      }
-    }
-
+const removeNoJS = (elements) => {
+  elements.forEach((elem) => {
+    elem.classList.remove('no-js');
   });
-}
+};
+
+const addClassOnElements = (targetButton) => {
+  let currentId = targetButton.getAttribute('data-button-id');
+  let currentTab = document.querySelector(`[data-tab='${currentId}']`);
+
+  if (!targetButton.classList.contains('subscription__nav-button--active')) {
+    TAB_BUTTONS.forEach((elem) => {
+      elem.classList.remove('subscription__nav-button--active');
+    });
+
+    TAB_CONTENTS.forEach((elem) => {
+      elem.classList.remove('subscription__subcontent--active');
+    });
+
+    targetButton.classList.add('subscription__nav-button--active');
+    currentTab.classList.add('subscription__subcontent--active');
+  }
+};
+
+const onClickTab = () => {
+  TAB_NAVIGATION.classList.remove('no-js');
+  SUB_TITLE.forEach((elem) => {
+    elem.style.display = 'none';
+  });
+  removeNoJS(TAB_BUTTONS);
+  removeNoJS(TAB_CONTENTS);
+
+  TAB_NAVIGATION.addEventListener('click', function (evt) {
+    let targetButton = evt.target.closest('[data-sub-button]');
+    if (targetButton) {
+      addClassOnElements(targetButton);
+    }
+  });
+};
 
 export {onClickTab};

@@ -75,7 +75,7 @@
                   <source srcset="./img/content/video.webp, img/content/video@2x.webp 2x" type="image/webp">
                   <img src="./img/content/video.png" srcset="img/content/video@2x.png 2x" width="364" height="228" alt="Постер видео." data-video-poster>
                 </picture>
-                <button class="btn gym__button is-nojs" data-video-button type="button" aria-label="Включить видео."></button>
+                <button class="btn gym__button" data-video-button type="button" aria-label="Включить видео."></button>
               </div>
             </div>
           </div>
@@ -84,13 +84,12 @@
           <div class="container subscription__container">
             <h2>Абонементы</h2>
             <div class="subscription__nav no-js" data-sub-nav>
-              <button class="btn subscription__nav-button subscription__nav-button--active" type="button">1 месяц</button>
-              <button class="btn subscription__nav-button" type="button">6 месяцев</button>
-              <button class="btn subscription__nav-button" type="button">12 месяцев</button>
+              <button class="btn subscription__nav-button subscription__nav-button--active no-js" type="button" data-button-id="tab-1" data-sub-button>1 месяц</button>
+              <button class="btn subscription__nav-button no-js" type="button" data-button-id="tab-2" data-sub-button>6 месяцев</button>
+              <button class="btn subscription__nav-button no-js" type="button" data-button-id="tab-3" data-sub-button>12 месяцев</button>
             </div>
-            <!--На 1 месяц-->
             <div class="subscription__content">
-              <div class="subscription__subcontent subscription__subcontent--active">
+              <div class="subscription__subcontent subscription__subcontent--active no-js" data-tab="tab-1" data-sub-tab>
                 <h3 data-sub-title>Абонементы на&nbsp;1&nbsp;месяц</h3>
                 <ul class="subscription__list">
                   <li class="subscription__item" tabindex="0">
@@ -134,8 +133,7 @@
                   </li>
                 </ul>
               </div>
-              <!--На 6 месяцев-->
-              <div class="subscription__subcontent">
+              <div class="subscription__subcontent no-js" data-tab="tab-2" data-sub-tab>
                 <h3 data-sub-title>Абонементы на&nbsp;6&nbsp;месяцев</h3>
                 <ul class="subscription__list">
                   <li class="subscription__item" tabindex="0">
@@ -179,8 +177,7 @@
                   </li>
                 </ul>
               </div>
-              <!--На 12 месяцев-->
-              <div class="subscription__subcontent">
+              <div class="subscription__subcontent no-js" data-tab="tab-3" data-sub-tab>
                 <h3 data-sub-title>Абонементы на&nbsp;12&nbsp;месяцев</h3>
                 <ul class="subscription__list">
                   <li class="subscription__item" tabindex="0">
@@ -228,7 +225,7 @@
             <picture>
               <source media="(max-width: 1199px)" srcset="./img/content/pancakes-tablet.webp, ./img/content/pancakes-tablet@2x.webp 2x" type="image/webp">
               <source srcset="./img/content/pancakes-desktop.webp 1x, ./img/content/pancakes-desktop@2x.webp 2x" type="image/webp">
-              <img loading="lazy" src="./img/content/pancakes-desktop.png" srcset="./img/content/pancakes-desktop@2x.png 2x" width="287" height="424" alt="Блины для штанги.">
+              <img loading="lazy" src="./img/content/pancakes-desktop.png" srcset="./img/content/pancakes-desktop@2x.png 2x" width="287" height="494" alt="Блины для штанги.">
             </picture>
           </div>
         </section>
@@ -430,7 +427,12 @@
           <div class="container advantages__container">
             <h2>Наши преимущества</h2>
             <ul class="advantages__list">
-              <li class="advantages__item advantages__item--space">
+              <li class="advantages__item advantages__item--center"> <!--Центральная карточка-->
+                <p>100</p>
+                <h3>Тренажеров</h3>
+                <span>Современные тренажеры на&nbsp;все группы мышц</span>
+              </li>
+              <li class="advantages__item">
                 <div class="advantages__accent">
                   <p>900</p>
                   <span>кв/м</span>
@@ -440,7 +442,7 @@
                   <span>Занимайтесь без очередей и&nbsp;толпучки</span>
                 </div>
               </li>
-              <li class="advantages__item advantages__item--square">
+              <li class="advantages__item">
                 <div class="advantages__accent">
                   <p>70</p>
                   <span>машин</span>
@@ -450,12 +452,7 @@
                   <span>Вы&nbsp;всегда найдете место для своей&nbsp;машины на&nbsp;нашей парковке</span>
                 </div>
               </li>
-              <li class="advantages__item advantages__item--center">
-                <p>100</p>
-                <h3>Тренажеров</h3>
-                <span>Современные тренажеры на&nbsp;все группы мышц</span>
-              </li>
-              <li class="advantages__item advantages__item--comfort">
+              <li class="advantages__item">
                 <div class="advantages__accent">
                   <p>350</p>
                   <span>мест</span>
@@ -484,11 +481,9 @@
             <ul class="stock__list">
               <li class="stock__item stock__item--promo">
                 <div class="stock__item-description">
-                  <div class="stock__item-content">
-                    <h3>Год</h3>
-                    <span>4999</span>
-                    <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
-                  </div>
+                  <h3>Год</h3>
+                  <span>4999</span>
+                  <p>Безлимитный абонемент в&nbsp;тренажерный зал</p>
                   <a class="stock__link stock__link--promo" href="#">подробнее</a>
                 </div>
                 <div class="stock__img-wrapper">

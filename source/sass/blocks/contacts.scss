@@ -34,6 +34,7 @@
   @include vp-767 {
     font-size: 32px;
     line-height: 38px;
+    margin-bottom: 19px;
   }
 }
 
@@ -42,7 +43,7 @@
   margin-right: auto;
   margin-left: 120px;
   position: relative;
-  padding: 11px 0 0 4px;
+  padding: 12px 0 0 4px;
   list-style-type: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -82,29 +83,28 @@
   }
 }
 
-.contacts__item {
+.contacts__item--address {
   @include vp-767 {
-    &--address {
-      order: 1;
-    }
+    order: 1;
+  }
+}
 
-    &--phone {
-      order: 3;
-    }
+.contacts__item--phone {
+  @include vp-767 {
+    order: 3;
+  }
+}
 
-    &--schedule {
-      order: 2;
-    }
-
-    &--email {
-      order: 4;
-    }
+.contacts__item--schedule {
+  @include vp-767 {
+    order: 2;
   }
 }
 
 .contacts__item--email {
   @include vp-767 {
     margin-top: -2px;
+    order: 4;
   }
 }
 

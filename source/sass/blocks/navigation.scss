@@ -37,12 +37,12 @@
     margin-bottom: 6px;
     margin-right: 10px;
   }
+}
 
-  &--first {
-    @include vp-767 {
-      width: 134px;
-      margin-top: 40px;
-    }
+.navigation__item--first {
+  @include vp-767 {
+    width: 134px;
+    margin-top: 40px;
   }
 }
 
