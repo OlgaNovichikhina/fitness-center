@@ -120,14 +120,14 @@
 .gym__video {
   position: relative;
   z-index: 1;
-  top: -18%;
+  top: -113px;
   left: -9.6%;
   width: 364px;
 
   @include vp-1199 {
     width: 266px;
     height: 167px;
-    top: 50%;
+    top: -2px;
     left: 50%;
     transform: translate(-50%, -50%);
   }

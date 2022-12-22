@@ -79,6 +79,7 @@ const swipeReviewsSwiper = () => {
       },
       spaceBetween: 60,
       slidesPerView: 1,
+      autoHeight: true,
     });
   }
 };

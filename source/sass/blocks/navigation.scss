@@ -5,16 +5,16 @@
 }
 
 .navigation__list {
-  max-width: 455px;
+  max-width: 520px;
   margin: 0;
-  padding: 0 0 0 11px;
+  padding: 0 0 0 42px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
 
   @include vp-1199 {
-    padding: 0 0 0 15px;
-    max-width: 418px;
+    padding: 0 0 0 36px;
+    max-width: 460px;
   }
 
   @include vp-767 {
@@ -44,10 +44,6 @@
     width: 134px;
     margin-top: 40px;
   }
-}
-
-.navigation__item:nth-child(5n) {
-  margin-right: 0;
 }
 
 .navigation__link {

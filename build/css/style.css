@@ -1589,7 +1589,7 @@ button,
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  max-width: 675px;
+  max-width: 170px;
   margin-left: auto;
   z-index: 1;
 }
@@ -1699,7 +1699,7 @@ button,
 }
 
 .header__list {
-  margin: 305px 0 30px 20px;
+  margin: 305px 0 30px 19px;
   list-style: none;
   padding: 0;
   width: 113px;
@@ -1773,7 +1773,7 @@ button,
 .gym__video {
   position: relative;
   z-index: 1;
-  top: -18%;
+  top: -113px;
   left: -9.6%;
   width: 364px;
 }
@@ -2832,6 +2832,7 @@ button,
 }
 
 .reviews__item {
+  height: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 80px 1fr;
@@ -2842,7 +2843,7 @@ button,
   background: #1c3374;
   -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
-  padding: 50px 62px 54px;
+  padding: 50px 62px 57px;
 }
 
 .reviews__item h3 {
@@ -2852,7 +2853,7 @@ button,
   line-height: 150%;
   color: #ffffff;
   margin-top: 5px;
-  margin-bottom: 13px;
+  margin-bottom: 10px;
 }
 
 .reviews__item blockquote {
@@ -3084,7 +3085,8 @@ button,
   margin-right: auto;
   margin-left: 120px;
   position: relative;
-  padding: 12px 0 0 4px;
+  padding: 0 0 0 4px;
+  margin-top: 30px;
   list-style-type: none;
   display: -ms-grid;
   display: grid;
@@ -3099,11 +3101,15 @@ button,
 .contacts__list::before {
   content: "";
   position: absolute;
-  top: 23px;
-  left: 50%;
+  display: block;
   width: 1px;
-  height: 78%;
   background-color: #74819c;
+  top: 11px;
+  bottom: 11px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .contacts__item h3 {
@@ -3206,9 +3212,9 @@ button,
 }
 
 .navigation__list {
-  max-width: 455px;
+  max-width: 520px;
   margin: 0;
-  padding: 0 0 0 11px;
+  padding: 0 0 0 42px;
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3221,10 +3227,6 @@ button,
   margin-right: 31px;
   margin-bottom: 10px;
   padding: 5px;
-}
-
-.navigation__item:nth-child(5n) {
-  margin-right: 0;
 }
 
 .navigation__link {
@@ -3390,6 +3392,8 @@ button,
     line-height: 29px;
     letter-spacing: 0.02em;
     margin-top: 5px;
+    margin-right: 0;
+    margin-left: 15px;
   }
 
   .header__intro {
@@ -3477,7 +3481,7 @@ button,
   .gym__video {
     width: 266px;
     height: 167px;
-    top: 50%;
+    top: -2px;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -3776,7 +3780,7 @@ button,
   }
 
   .reviews {
-    padding-bottom: 69px;
+    padding-bottom: 71px;
   }
 
   .reviews__container {
@@ -3899,8 +3903,8 @@ button,
   }
 
   .navigation__list {
-    padding: 0 0 0 15px;
-    max-width: 418px;
+    padding: 0 0 0 36px;
+    max-width: 460px;
   }
 
   .navigation__item {
@@ -4036,15 +4040,15 @@ button,
   }
 
   .subscription__nav {
-    margin: 0 -5px 35px;
-    -webkit-column-gap: 35px;
-    -moz-column-gap: 35px;
-    column-gap: 35px;
+    margin: 0 auto 35px;
+    -webkit-column-gap: 46px;
+    -moz-column-gap: 46px;
+    column-gap: 46px;
   }
 
   .subscription__nav-button::after {
     left: 56%;
-    width: 95%;
+    width: 110%;
   }
 
   .subscription__nav-button:last-child::after {
@@ -4053,6 +4057,7 @@ button,
 
   .subscription__nav-button {
     font-size: 16px;
+    padding: 12px 0 13px;
   }
 
   .subscription__content h4 {
@@ -4341,7 +4346,7 @@ button,
   }
 
   .reviews {
-    padding-bottom: 59px;
+    padding-bottom: 62px;
   }
 
   .reviews__container {

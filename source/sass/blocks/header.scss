@@ -36,7 +36,7 @@
 .header__contacts {
   display: flex;
   flex-wrap: wrap;
-  max-width: 675px;
+  max-width: 170px;
   margin-left: auto;
   z-index: 1;
 
@@ -67,6 +67,8 @@
     line-height: 29px;
     letter-spacing: 0.02em;
     margin-top: 5px;
+    margin-right: 0;
+    margin-left: 15px;
   }
 
   @include vp-767 {
@@ -198,7 +200,7 @@
 }
 
 .header__list {
-  margin: 305px 0 30px 20px;
+  margin: 305px 0 30px 19px;
   list-style: none;
   padding: 0;
   width: 113px;
